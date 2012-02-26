@@ -1,0 +1,24 @@
+I made this for my high school science fair. 
+
+Email: takeabyteoutofthis@gmail.com
+
+It uses a simple alpha beta pruning algorithm to find the "best" move, based on the score. Although currently it is still a little buggy and can't really beat a human.
+
+Most of the algorithms are in the 'Logic' class. 
+
+There are a methods that are not being used at the moment, but will hopefully be finished one day.
+  Game.learn()
+  Game.learnLoop()
+  Game.checkDir()
+
+In addition 'FileSystem.java' is not being used at the moment.
+
+Those methods and class were going to be used to make a learning mode. The learning mode would have the AI play games against its self and record them. However at the moment this is not practical, because with the current state of the algorithms in 'Logic.java' the AI would always make the same moves. This could be solved by adding randomness.
+
+Here are some future improvements:
+- Improve the alpha beta pruning algorithm (Logic.getBestMove()) and the scoring algorithm (Logic.getScore()) to favor       taking pieces.
+- Improve the GUI: no more need for console, draggible checkers pieces, and game history/past moves viewer.
+- Implement learning mode (read paragraph above).
+
+-- Logic.getScore() && Logic.AnalyzePiece()
+The current scoring algorithm favors pieces that are close to kingship, if the piece are on either edge of the board (column 1 & 8), and how many possible moves it has.
