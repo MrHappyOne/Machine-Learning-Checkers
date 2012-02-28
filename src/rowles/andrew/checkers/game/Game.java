@@ -9,7 +9,7 @@ import rowles.andrew.checkers.Window;
 
 public class Game {
 
-	final double Version = 0.01;
+	final double Version = 0.02;
 
 	ArrayList<Piece> board = null;
 	ArrayList<ArrayList<Piece>> history;
