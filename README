@@ -16,9 +16,31 @@ In addition 'FileSystem.java' is not being used at the moment.
 Those methods and class were going to be used to make a learning mode. The learning mode would have the AI play games against its self and record them. However at the moment this is not practical, because with the current state of the algorithms in 'Logic.java' the AI would always make the same moves. This could be solved by adding randomness.
 
 Here are some future improvements:
-- Improve the alpha beta pruning algorithm (Logic.getBestMove()) and the scoring algorithm (Logic.getScore()) to favor       taking pieces.
+- Improve the alpha beta pruning algorithm (Logic.getBestMove()) and the scoring algorithm (Logic.getScore()) to favor       taking pieces. (Started in 0.02)
 - Improve the GUI: no more need for console, draggible checkers pieces, and game history/past moves viewer.
 - Implement learning mode (read paragraph above).
 
 -- Logic.getScore() && Logic.AnalyzePiece()
 The current scoring algorithm favors pieces that are close to kingship, if the piece are on either edge of the board (column 1 & 8), and how many possible moves it has.
+
+--------------------------
+Version History
+
+----
+0.02
+----
+
+Helper.java
+- added getPossibleAttacks() to Helper and intergreted it in the scoring algorithms.
+- added provision to checkSquare() to make sure move is within the bounds of board.
+- added provision to isLegal() to check if move is within bounds of board. This prevents the app from crashing if the user provides failty piece coordinates.
+
+Logic.java
+- Modified scoring algorithm to consider the possible attacks.
+- Modified bestMove() to start to consider future moves (this is not fully implemented yet).
+
+Canvas.java
+- shows score on top of pieces in GUI.
+
+Summary:
+The intelligence and its decision making has greatly increased. It is now less likely to make stupid moves.
