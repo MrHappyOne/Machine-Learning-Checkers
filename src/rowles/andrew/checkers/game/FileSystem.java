@@ -11,29 +11,33 @@ public class FileSystem {
 
 	// TODO get the save working
 	public void save(ArrayList<ArrayList<Piece>> a, String filename)
-			throws IOException {
+			throws IOException
+	{
 
 		FileOutputStream saveFile = new FileOutputStream(filename);
 
 		ObjectOutputStream save = new ObjectOutputStream(saveFile);
 
-		try {
+		try
+		{
 			save.writeObject(a);
 
 			save.close();
 
-		} catch (Exception exc) {
+		} catch (Exception exc)
+		{
 			exc.printStackTrace(); // If there was an error, print the info.
 		}
 	}
 
 	// TODO implement and test this
-	@SuppressWarnings("unchecked")
-	public ArrayList<ArrayList<Piece>> load(String filename) {
+	public ArrayList<ArrayList<Piece>> load(String filename)
+	{
 
 		ArrayList<ArrayList<Piece>> a = null;
 
-		try {
+		try
+		{
 			FileInputStream saveFile = new FileInputStream(filename);
 
 			ObjectInputStream save = new ObjectInputStream(saveFile);
@@ -41,7 +45,9 @@ public class FileSystem {
 			a = (ArrayList<ArrayList<Piece>>) save.readObject();
 
 			save.close();
-		} catch (Exception exc) {
+		} 
+		catch (Exception exc)
+		{
 			exc.printStackTrace();
 		}
 		return a;
