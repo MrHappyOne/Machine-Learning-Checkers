@@ -27,6 +27,22 @@ The current scoring algorithm favors pieces that are close to kingship, if the p
 Version History
 
 ----
+0.05
+----
+
+Overall:
+  - Saving and loading games works.
+  - Added some checks to getBestMove.
+  - Key controls for GUI. No more terminal needed! (arrow keys control selector, enter selects tile, backspace deselects tile, a displays info about piece in terminal).
+  - Adjusted scoring formual.
+  - Added selector class.
+  - Resized board.
+
+Glitches
+  - Key controls can glitch out, but doesn't crash game.
+  - Random move is a little glitchy.
+
+----
 0.02
 ----
 
